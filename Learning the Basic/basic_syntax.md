@@ -1,2 +1,0 @@
-# Sintaxe Básica
-## Comentparios
