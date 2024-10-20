@@ -1,5 +1,4 @@
-> Print
-> 
+# Print
 
 A função print() da ao computador a capacidade de se comunicar e exibir textos no console para o usuário. Ela pode receber um ou mais argumentos e, por padrão, converte esses argumentos em strings antes de exibi-los.
 
@@ -48,8 +47,28 @@ print(*objetos, sep=' ', end='\n', file=sys.stdout, flush=False)
     ```
     
     ### File:
+
+     
+    ```python
+    # Escrevendo em um Arquivo de Texto:
+    with open("exemplo.txt", "w") as f:
+    	print("Ola Mundo!", file=f)
+    # Escrevendo Várias Linhas em um Arquivo:
+    with open("lista_frutas.txt", "w") as f:
+        print("Maçã", file=f)
+        print("Banana", file=f)
+        print("Cereja", file=f)  # Cada fruta em uma linha
+    # Usando o Modo Append (Adicionar):
+    with open("saida.txt", "a") as f:
+        print("Nova linha adicionada.", file=f)  # Adiciona ao final do arquivo existente
+    # Redirecionando para sys.stdout:
+    import sys
+    with open("saida.txt", "w") as f:
+        print("Esta linha vai para o arquivo.", file=f)
+        print("Esta linha vai para o console.", file=sys.stdout)
+    ```
     
-    - (Como usar o File)
+    -
         
         ## Como usar o File (Detalhado)
         
@@ -105,22 +124,3 @@ print(*objetos, sep=' ', end='\n', file=sys.stdout, flush=False)
             
             ---
             
-    
-    ```python
-    # Escrevendo em um Arquivo de Texto:
-    with open("exemplo.txt", "w") as f:
-    	print("Ola Mundo!", file=f)
-    # Escrevendo Várias Linhas em um Arquivo:
-    with open("lista_frutas.txt", "w") as f:
-        print("Maçã", file=f)
-        print("Banana", file=f)
-        print("Cereja", file=f)  # Cada fruta em uma linha
-    # Usando o Modo Append (Adicionar):
-    with open("saida.txt", "a") as f:
-        print("Nova linha adicionada.", file=f)  # Adiciona ao final do arquivo existente
-    # Redirecionando para sys.stdout:
-    import sys
-    with open("saida.txt", "w") as f:
-        print("Esta linha vai para o arquivo.", file=f)
-        print("Esta linha vai para o console.", file=sys.stdout)
-    ```
